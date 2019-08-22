@@ -1,204 +1,278 @@
-O2OA
-==========
-## 简介
-O2OA 是一套现代企业级的办公平台。有以下特点\:
+# O2OA : Java企业信息化系统
 
-1. 核心代码开源
+O2OA是基于J2EE架构，集成移动办公、智能办公，支持私有化部署，自适应负载能力的，能够很大程度上节约企业软件开发成本的基于AGPL协议开放源代码的企业信息化系统需求定制开发解决方案，对外提供专业的开发运维等技术服务。
 
-2. 全功能免费
+![o2oa](https://static.oschina.net/uploads/space/2018/0918/200301_N9TG_3931542.png)
 
-3. 私有化部署，下载软件后可以安装在自己的服务器上
+O2OA平台拥有流程管理、门户管理、信息管理、数据管理和服务管理五大核心能力。用户可以直接使用平台已有功能进行信息信息化建设，平台提供了完整的用户管理，权限管理，流程和信息管理体系，并且提供了大量的开发组件和开箱即用的应用，可以大大减化企业信息化建设成本和业务应用开发难度。
 
-4. 随时随地办公，平台支持兼容HTML5的浏览器，并且开发了源生的IOS/Android应用
+
+# 其主要能力如下：
+
+流程管理：全功能流程引擎。基于任务驱动，开放式服务驱动，高灵活性、扩展性，事件定义丰富。包含人工、自动、拆分、合并、并行、定时、服务调用、子流程等功能。应用场景丰富，可轻松实现公文、合同、项目管理等复杂工作流应用。
+
+信息管理：具有权限控制能力的内容管理平台。支持自定义栏目、分类，表格，表单，多级权限系统，能轻松实现知识管理、通知公司、规章制度、文件管理等内容发布系统。
+
+门户管理：具体可视化表单编辑的，支持HTML直接导入的，支持各类数据源，外部应用集成能力的，所见即所得的门户管理平台。适用于实现企业信息化门户系统，可以轻松结合O2OA提供的认证设置与其他系统进行单点认证集成。
+
+服务管理：可以在前端脚本的形式，开发和自定义web服务，实现与后端服务数据交互的能力。
+
+数据中心：可以通过配置轻松实现数据透视图展示，数据统计、数据可视化图表开发等等功能。
+
+智能办公：拥有语音办公、人脸识别、指纹认证、智能文档纠错、智能填表推荐等智能办公特色
+
+移动办公：支持安卓\IOS手机APP办公，支持与企业微信和钉钉集成，支持企业私有化微信部署
+
+开箱即用：O2OA还提供如考勤管理、日程管理、会议管理、脑图管理、便签、云文件、企业社区、执行力管理等开箱即用的应用供企业选择
+
+
+# 产品特点\:
+
+1. 代码全部开源，开发者可以下载源码进行任意，编译成自己的信息化平台。
+
+2. 平台全功能免费，无任何功能和人数限制。
+
+3. 支持私有化部署，下载软件安装包后可以安装在自己的服务器上，数据更安全。
+
+4. 随时随地办公，平台支持兼容HTML5的浏览器，并且提供了原生的IOS/Android应用，并且支持钉钉和企业微信集成。
 
 5. 高可扩展性，用户通过简单的学习后，可以自定义配置门户、流程应用、内容管理应用
 
-更多的产品介绍、使用说明、下载、在线体验、API及讨论请移步至[http://o2oa.io/](http://www.o2oa.io/)
-
-![o2oa](http://muliba.u.qiniudn.com/post/20180801-225850@2x.png)
+更多的产品介绍、使用说明、下载、在线体验、API及讨论请移步至[http://www.o2oa.net/](http://www.o2oa.net/)
 
 
+# 官方网站\:
 
-## 安装
-建议您在[http://o2oa.io/](http://www.o2oa.io/)中下载最新版本的O2 Server进行安装使用    
-如果您要使用github的程序自行打包，可以`fork` 本仓库。  
-`fork` 操作完成后，会在您的 github 账户下创建一个 o2oa 的副本。接下来可以克隆到本地。  
-```bash  
-cd {YOUR_WORKING_DIRECTORY}
-git clone https://github.com/{YOUR_GITHUB_USERNAME}/o2oa.git  
-```
-## 扩展开发
-在开发前，请先了解`mootools`, 我们基于 `mootools`[https://mootools.net/](https://mootools.net/) 架构创建了产品的js类库。
+开源主页 : https://www.oschina.net/p/o2oa
 
-### 目录
-  前台程序位于github的x_desktop_web目录。  
+官方网站 : http://www.o2oa.net
 
-#### 目录说明
-```bash
-x_desktop                                //桌面资源、平台基础资源和通用工具类
-    config                                //系统配置目录
-    css                                
-    framework                            //系统用到的开源框架
-        ace                                //脚本编辑器框架
-        d3                                //图表框架
-        echarts                            //考勤用到的图表框架
-        htmleditor                        //富文本编辑器
-        kityminder                        //脑图
-        mootools                        //模块化、面对对象的JS Web应用框架
-        raphael                            //矢量图形框架，在流程图配置中用到
-    js                                
-    mwf4                                //通用资源和工具
-        package
-            lp                            //系统桌面语言包
-            widget                        //通用工具类
-            xAction                        //登录页和桌面用到的后台交互类
-            xDesktop                    //系统桌面工具类
-            xScript                        //流程引擎和内容管理自定义脚本的运行环境
-        MWF.js                            //底层方法JS库，对mootools的补充
-    preview                                //预览界面模拟json
-    common.js                            //底层方法、通用方法、框架引用JS库
-    index.html                            //首页HTML
-    app.html                            //在新窗口打开应用时的HTML
-    forum.html                            //在新窗口打开论坛的HTML
-    cmsdocMobile.html                    //手机端打开内容管理文档页面的HTML
-    {NAME}.html                            //其他在新窗口打开的HTML
-x_component_Attendance                    //考勤应用
-x_component_Chat                        //在线交流应用
-x_component_cms_Column                    //CMS（内容管理）栏目的列式、增删配置
-x_component_cms_ColumnManager            //CMS栏目管理设置（分类、表单、脚本、数据字典的列式、增删）
-x_component_cms_Document                //CMS文档
-x_component_cms_FormDesigner            //CMS表单设计
-x_component_cms_Index                    //CMS首页
-x_component_cms_Module                    //CMS栏目页面
-x_component_cms_QueryViewDesigner        //CMS查询视图设计（嵌入在文档中）
-x_component_cms_ScriptDesigner            //CMS脚本设计
-x_component_cms_ViewDesigner            //CMS列式视图设计
-x_component_cms_Xform                    //CMS文档中表单的实现
-x_component_Execution                    //OKR应用
-x_component_ExeManager                    //OKR文档的管理界面
-x_component_File                        //云文件
-x_component_Forum                        //论坛首页
-x_component_ForumCategory                //论坛分类页面
-x_component_ForumDocument                //论坛帖子页面
-x_component_ForumPerson                    //论坛个人中心
-x_component_ForumSearch                    //论坛搜索结果页面
-x_component_ForumSection                //论坛版块界面
-x_component_HotArticle                    //热点图片管理界面
-x_component_Meeting                        //会议室管理
-x_component_Note                        //桌面记事本插件
-x_component_OnlineMeeting                //在线会议应用
-x_component_OnlineMeetingRoom            //在线会议室
-x_component_Organization                //人员、部门、组织管理以及选择
-x_component_portal_PageDesigner            //门户页面设计
-x_component_portal_Portal                //门户展现
-x_component_portal_portalExplorer
-x_component_portal_PortalManager        //门户管理设置（页面、脚本的列式、增删）
-x_component_portal_ScriptDesigner        //门户脚本设计
-x_component_portal_XPage                //门户页面实现
-x_component_process_Application            //流程应用
-x_component_process_ApplicationExplorer    
-x_component_process_DictionaryDesigner    //流程数据字典
-x_component_process_FormDesigner        //流程表单设计
-x_component_process_ProcessDesigner        //流程图设计
-x_component_process_ProcessManager        //流程管理设置（流程图、表单、脚本、数据字典的列式、增删）
-x_component_process_ScriptDesigner        //流程脚本设计
-x_component_process_StatDesigner        //流程统计、流程监控设计
-x_component_process_TaskCenter            //办公中心，普通用户发起流程和查看待办
-x_component_process_ViewDesigner        //流程查询视图设计
-x_component_process_Work                //流程任务的展现
-x_component_process_Xfrom                //流程表单的实现
-x_component_Profile                        //用户个人设置界面
-x_component_Template                    //列式、弹出页接口类
-```
-### 规范：
-*  每个应用都是以 `x_component_{APPLICATION_NAME}`方式来命名，如x_component_Attendance表示考勤的目录  
-*  应用中至少包括下列文件及目录\:
-```bash
-x_component_{APPLICATION_NAME}  //x_component_HelloWorld
-    Main.js                 //应用主程序  
-    $Main                   //主程序用到的资源包  
-        appicon.png         //应用图标，在桌面上显示，尺寸为72*72
-        default             //样式包，可以创建其他名称的样式包，并在options传入到Main.js以改变页面风格  
-          css.wcss          //样式文件，以json格式编写
-          icon.png          //打开应用时，桌面标签页的图标，图片尺寸为24*24
-    lp                      //语言包，目前支持中文  
-        zh-cn.js        
-    Actions                  //如果没有后台交互，您可以忽略此目录           
-        action.json         //后台服务的url和方法，本系统使用JAX-RS 方式的 RESTful Web Service
-        RestAction.js       //应用程序中直接使用此类的方法进行后台交互
-```
+Gitee : https://gitee.com/liyihz2008/O2OA
 
-### 创建Hello World
-本样例中，我们创建一个名为HelloWorld的应用，在应用窗口中显示“您好，这是我的第一个O2应用！”。
+Github : https://github.com/o2oa/o2oa
 
-#### 创建目录：
-在x_desktop_web目录下创建x_component_HelloWorld目录，并按照规范第2点创建目录和文件。
+脚本API：http://www.o2oa.net/x_desktop/portal.html?id=dcd8e168-2da0-4496-83ee-137dc976c7f6
 
-#### 编写css.wcss：
-打开$Main\default\css.wcss输入json格式的样式文本。
-```bash
-{
-    "contentStyle" : {
-        "font-size" : "14px", 
-        "line-height" : "20px",
-        "margin" : "20px",
-        "padding" : "10px"
-    }
-}
-```
+O2OA开发相关教程天梯：https://my.oschina.net/o2oa/blog/3016363
 
-#### 编写lp\zh-cn.js：
-```bash
-MWF.xApplication.HelloWorld.LP = {
-    "title": "HelloWorld",
-    "contentText": "您好，这是我的第一个O2应用！"
-};
-```
 
-#### 编写Main.js：
-```bash
+# 最新版本服务器安装包下载[o2server_V4.1921]\:
 
-//所有的应用类都扩展在MWF.xApplication对象下
-//应用名称HelloWorld要和目录x_component_HelloWorld最后一段一致
-//在执行时，平台会自动创建MWF.xApplication.HelloWorld类和MWF.xApplication.HelloWorld.options
+windows 64Bit : http://download.o2oa.net/download/o2server_20190618172734_windows.zip
 
-MWF.xApplication.HelloWorld.options.multitask = true; //multitask表示应用可以在一个浏览器窗口重复打开
-MWF.xApplication.HelloWorld.Main = new Class({          //应用入口类
-    Extends: MWF.xApplication.Common.Main,              //MWF.xApplication.Common.Main类提供了平台桌面窗口创建和其他基本功能，比如展现、最大化、最小化等
-    Implements: [Options, Events],                      //使用mootools的Options和Events类，请参考mootools的文档
+Linux 64Bit : http://download.o2oa.net/download/o2server_20190618172734_linux.zip
 
-    options: {                                          //应用选项
-        "style": "default",                              //样式，和 目录$Main/default对应。应用初始化的时候会自动加载$Main/default/css.wcss文件，可以在this.css中使用定义的样式      
-        "name": "HelloWorld",
-        "icon": "icon.png",                              //打开应用时，桌面标签页的图标
-        "width": "400",                                  //应用窗口宽度
-        "height": "500",                              //应用窗口高度
-        "isResize": false,                              //应用窗口是否允许拖动改变大小
-        "isMax": false,                                  //应用窗口是否允许最大化
-        "title": MWF.xApplication.HelloWorld.LP.title      //应用窗口标题，MWF.xApplication.HelloWorld.LP在 lp/zh-cn.js中定义
-    },
-    onQueryLoad: function(){                            //在应用加载前执行的程序
-        this.lp = MWF.xApplication.HelloWorld.LP;        //设置应用的语言包
-    },
-    loadApplication: function(callback){
-        //this.restActions = new MWF.xApplication.HelloWorld.Actions.RestActions();  //后台交互对象。和Actions/RestAction.js对应，如果没有后台交互可以忽略此代码
-        var div = new Element("div", {                    //创建一个div
-            styles : this.css.contentStyle,                    //样式为content。应用初始化的时候会自动加载$Main/default/css.wcss文件，可以在this.css中使用定义的样式
-            text : this.lp.contentText                    //文本内容是zh-cn.js里定义的contentText
-        }).inject( this.content )                        //插入到窗口内容中。this.content是应用窗口的内容DOM容器，您创建的DOM对象都是this.content的子对象
-    }
-});
-```
+MacOS : http://download.o2oa.net/download/o2server_20190618172734_macos.zip
 
-#### 部署应用
-1. 在web端进入系统  
-2. 点击左上角的图标打开应用菜单，切换到“组件”界面。  
-3. 打开“部署管理”，在打开的界面最下方找到“部署组件”并点击。  
-4. 部署组件界面中，“组件名称”、“组件标题”、“组件路径”都填写"HelloWorld",然后点击“部署组件”，部署完成。  
-5. 已部署的应用可以在“组件”界面找到，您可以拖动到桌面创建快捷方式。  
+AIX : http://download.o2oa.net/download/o2server_20190618172734_aix.zip
 
-## 授权协议
-o2oa软件遵守双重协议，一个是AGPL授权协议，一个是商用授权协议。  
-1、o2oa是开源软件，您可以修改源码及免费使用；这时需遵守AGPL协议。  
-2、当使用者使用o2oa软件提供收费服务，或者对o2oa进行分发、销售时需进行商业授权。具体请查看：[http://www.o2oa.io/product.html](http://www.o2oa.io/product.html)。  
-3、使用者下载本软件即表示愿遵守此项协议。  
+中标麒麟（龙芯）：http://download.o2oa.net/download/o2server_20190618172734_neokylin_loongson.zip
+
+
+# 官方网盘下载\:
+
+百度云盘：https://pan.baidu.com/s/1oBQ1atXGyXdLaYE5uAqF1w   提取码: pnk9
+
+腾讯微云：https://share.weiyun.com/5krUMjj
+
+
+# 最新版本 v4.1921\:
+
+[2019-06-18]新增功能：[流程引擎]新增通过配置设置是否要删除无内容的空草稿。
+
+[2019-06-18]新增功能：[流程引擎]新增获取我创建的工作数据接口。
+
+[2019-06-18]新增功能：[流程引擎]新增获取我创建工作数据接口。
+
+[2019-06-18]新增功能：[流程引擎]流程记录新增按活动、意见组、部门分组支持。
+
+[2019-06-18]新增功能：[流程引擎]流程里增加驳回功能，流程结束后可以恢复到流转状态。
+
+[2019-06-18]新增功能：[流程引擎]流程附件增加查看、下载、编辑权限的设置。
+
+[2019-06-18]新增功能：[流程引擎]支持流程根据工作日志进行指定回滚。
+
+[2019-06-18]新增功能：[流程引擎]新增自动删除草稿相关配置。
+
+[2019-06-18]新增功能：[流程引擎]流程时效管理新增催办功能。
+
+[2019-06-18]新增功能：[流程引擎]添加增加分支、流程回溯功能。
+
+[2019-06-18]新增功能：[流程引擎]增加中抢办功能。
+
+[2019-06-18]新增功能：[流程表单]流程表单增加新的皮肤样式。
+
+[2019-06-18]新增功能：[流程表单]表单和页面创建、赋值、拖动组件时按Ctrl进行精确定位。
+
+[2019-06-18]新增功能：[组织管理]增加委托授权相关设置。
+
+[2019-06-18]新增功能：[内容管理]支持根据用户是否阅读查询发布的文档列表。
+
+[2019-06-18]新增功能：[内容管理]支持根据文档ID列表判断后返回未读文档ID列表。
+
+[2019-06-18]新增功能：[内容管理]添加文档访问次数，支持视图查询访问次数 viewCount，添加最后内容修改时间 modifyTime。
+
+[2019-06-18]新增功能：[消息提醒]新增加模块x_message_core_entity，x_message_assemble_communicate"
+
+[2019-06-18]新增功能：[图片识别]增加图片识别文本修改功能。
+
+[2019-06-18]新增功能：[操作系统]支持中标麒麟操作系统：中标麒麟高级服务器操作系统软件（龙芯64位）。
+
+[2019-06-18]新增功能：[数据库连接]支持国产人大金仓KingbaseES8数据库。
+
+[2019-06-18]新增功能：[移动办公]AndroidH端新增H5网页文件选择能力的支持。
+
+[2019-06-18]新增功能：[移动办公]IOS端新增蓝色主题。
+
+[2019-06-18]新增功能：[移动办公]移动端支持表单控件图片编辑器。
+
+[2019-06-18]新增功能：[移动办公]移动端工作界面支持可扩展操作按钮。
+
+[2019-06-18]新增功能：[移动办公]移动端新增常用设备管理。
+
+[2019-06-18]新增功能：[移动办公]新增O2OA移动端JSAPI，通知模块、日期，日历选择模块、导航栏工具模块、设备信息模块。
+
+[2019-06-18]新增功能：[平台版本]新增中标麒麟龙芯版本。
+
+[2019-06-18]系统优化：[服务器控制台]修改图片识别默认设置。
+
+[2019-06-18]系统优化：[流程引擎]自动过滤第一条提醒消息。
+
+[2019-06-18]系统优化：[流程引擎]更新通过API获取workContext中的待办排序，保持与前台一致。
+
+[2019-06-18]系统优化：[流程引擎]work增加当前处理人的显示字段manualTaskIdentityText。
+
+[2019-06-18]系统优化：[流程引擎]workLog增加group字段。
+
+[2019-06-18]系统优化：[流程引擎]workLog增加opinionGroup字段。
+
+[2019-06-18]系统优化：[数据库支持]增加人大金仓V8的支持。
+
+[2019-06-18]系统优化：[数据库连接]由应用管理连接池改为jndi管理resource连接池，连接数需求大幅下降。
+
+[2019-06-18]系统优化：[消息提醒]废弃模块x_collaboration_assemble_websocket，x_collaboration_service_message，x_collaboration_core_entity，x_collaboration_core_message"
+
+[2019-06-18]系统优化：[内容管理]优化源码调exception目录结构。
+
+[2019-06-18]系统优化：[内容管理]支持栏目和分类别名修改。
+
+[2019-06-18]系统优化：[内容管理]优化栏目和分类更名处理逻辑，使用队列提升处理性能。
+
+[2019-06-18]系统优化：[内容管理]优化删除文档过程，降低内存占用。
+
+[2019-06-18]系统优化：[内容管理]优化平台启动过程，大幅提高平台启动速度。
+
+[2019-06-18]问题修复：[流程引擎]召回时会删除办理时间。
+
+[2019-06-18]问题修复：[神经网络]修正神经网络无法删除的bug。
+
+[2019-06-18]问题修复：[数据统计]视图中选择'周'无效。
+
+[2019-06-18]问题修复：[数据库支持]人大金仓ES8数据库boolean读取错误的bug。
+
+[2019-06-18]问题修复：[用户管理]修复管理员被锁定的bug。
+
+[2019-06-18]问题修复：[内容管理]修复栏目更名引起的内存溢出问题。
+
+[2019-06-18]问题修复：[内容管理]修复创建文档时标题超长的问题（截取70字）。
+
+[2019-06-18]问题修复：[H5移动端界面]修正H5界面展示错误。
+
+[2019-06-18]问题修复：[平台功能]其他已知问题的修复。
+
+
+# 配置编译环境\:
+
+强烈建议将项目Fork到自己的仓库里，Clone到本地后进行编译和打包，偶尔会发现下载zip文件后，commons/ext目录里的jar包不可用，全部只有1k大小。
+
+下载源码建议安装 git lfs，然后 Clone, 这样获取的源码可以编译。https://github.com/o2oa/o2oa 仓库里的源码已经编译打包测试通过，无任何问题。
+
+
+
+## 安装NodeJS
+
+1、访问nodejs的官方网站的downdolad，网址：https://nodejs.org/en/download/，获取Linux Binaries (x64)安装包下载链接：
+
+      wget https://nodejs.org/dist/v10.15.0/node-v10.15.0-linux-x64.tar.xz
+
+2、解压安装：
+
+	# yum search xz
+	# yum install xz.i386
+	# xz -d node-v10.15.0-linux-x64.tar.xz
+	# tar -xf node-v10.15.0-linux-x64.tar
+	# mv node-v10.15.0-linux-x64 node-v10.15.0
+
+3、配置nodejs（略）
+
+## 安装 Java8 及配置Java环境 
+
+    略
+	
+## 安装 apache-maven-3.6.0 及配置maven环境 
+
+    wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+	
+    yum -y install apache-maven
+	
+	
+## 安装 apache-ant-1.10.5 ant 	
+
+    yum -y install ant
+    
+
+# 源码编译
+
+1、打开命令提示工具，cd到o2oa/o2server目录
+
+    cd /usr/o2oa/o2server
+
+2、执行命令进行编译：mvn install，开始进行源码编译
+
+    mvn install
+
+3、打包安装程序： ant
+
+    ant
+
+## 关于编译错误
+第一次使用maven进行项目编译执行 mvn install 可能会发生异常，原因是编译生成的META-INF/persistence.xml来不及加载。这种情况下，您可以再执行一次mvn install即可完成对项目的编译。
+
+[ERROR] Failed to execute goal org.apache.openjpa:openjpa-maven-plugin:3.0.0:enhance(enhanncer) on project x_base_core_project: Exception enhancer of goal org.apache.openjpa:openjpa-maven-plugin:3.0.0:enhance failed: MetaDataFactory could not be configured (conf.newMetaDataFactoryInstance() returned null). This might mean that no configuration properties were fount. Ensured that you have a META-INF/persistence.xml file, that it is  available in your classpath, or that the properties file you are using for configuration is available. If you are using Ant, please see the <properties> or <propertiesFile> attributes of the task's nested <config> element. This can also occur if your OpenJPA distribution jars are corrupt, or if your security policy is overly strict. 
+
+-> [Help 1][ERROR]......
+
+如果在编译的时候遇到上述错误，直接重新再 mvn install 就可以了。
+
+## 关于编译打包结果
+
+o2oa/o2server/target目录下会有打包好的zip包，将此zip包Copy到其他目录解压（避免目录层级太深造成启动异常），然后启动服务即可。
+
+服务器部署和启动相关的教程文档，请移步系列教程：https://my.oschina.net/u/3931542/blog/2209110
+
+
+# 服务器部署
+
+## 部署教程
+
+开源中国技术博客：https://my.oschina.net/u/3931542
+
+## windows部署步骤：
+
+1.下载o2server_yyyyMMddHHmmss_windows.zip程序包。
+
+2.解压下载后的压缩包到任意目录。
+
+3.确认开通服务器的80、20020、20030端口。
+
+4.打开o2server文件夹，选择start_windows.bat双击打开。
+
+5.在命令行中输入"start" 回车,启动服务,等待相关服务启动完成。
+
+6.启动完成后打开浏览器访问http://127.0.0.1。
+
+7.输入用户名xadmin密码o2登陆系统。
+
+
+
+
